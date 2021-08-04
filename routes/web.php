@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Mail\SendContactForm;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,6 +34,11 @@ Route::group(['middleware'=>['auth','verified']],function(){
 
     Route::get("/contact", [ContactController::class,'index'])->name('contact.index');
     Route::post("/contact", [ContactController::class,'send'])->name('contact.send');
+
+
+    Route::get('/mailable/contact', function () {
+        return new SendContactForm("Motivo","Mensja");
+    });
 
 
 });
