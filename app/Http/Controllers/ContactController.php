@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactFormRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use App\Mail\SendContactForm;
 use Illuminate\Support\Facades\Mail;
 
@@ -15,14 +16,20 @@ class ContactController extends Controller
     }
 
     # ENVIA EL EMAIL
-    public function send(Request $request)
+    /**
+     * Enviar el email
+     *
+     * Utilizados anteriormente
+     * Request $request
+     * @return void
+     */
+    public function send(ContactFormRequest $request)
     {
         try {
-            $this->validate($request, [
-                "subject" => "required|string|min:5|max:100",
-                "message" => "required|string|min:5"
-                // "message" => "required|string|min:20|max:3000"
-            ]);
+            // $this->validate($request, [
+            //     "subject" => "required|string|min:5|max:100",
+            //     "message" => "required|string|min:5"
+            // ]);
             // dd($request->input());
             Mail::to(User::first())->send(
                 new SendContactForm($request->input('subject'), $request->input('message'))

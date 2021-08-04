@@ -29,6 +29,7 @@
 
             <!-- Page Content -->
             <main>
+                {{-- SE INCLUYE EL COMPONENTE PARA VISUALIZAR LOS MENSAJES QUE SE TIENEN --}}
                 <x-flash-messages/>
                 {{ $slot }}
             </main>
