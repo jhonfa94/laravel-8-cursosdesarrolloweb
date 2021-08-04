@@ -1,7 +1,7 @@
 # Guía para instalar el proyecto
 Este es un proyecto de prueba 
 
-El curso esta disponible en el siguiente enlace: [Curso gratuito Laravel 8 desde cer](https://www.youtube.com/playlist?list=PLd3a4dr8oUsDAjQa8T0eKSyOxUCoiMVxO)
+El curso esta disponible en el siguiente enlace: [Curso gratuito Laravel 8 desde cero](https://www.youtube.com/playlist?list=PLd3a4dr8oUsDAjQa8T0eKSyOxUCoiMVxO)
 
 ###Pasos para instalar el proyecto:
 
